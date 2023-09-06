@@ -9,7 +9,7 @@ export default function Projects() {
   const [projectData, setProjectData] = useState([]);
   useEffect(() => {
     axios
-      .get("https://myportfolio-api.up.railway.app/api/v1/projects")
+      .get("http://localhost:5000/api/v1/projects")
       .then((response) => setProjectData(response.data.data))
       .catch((error) => console.error(`Error fetching project data: ${error.message}`))
   }, []);
@@ -33,18 +33,6 @@ export default function Projects() {
           {myProjects}
         </Carousel>
       </div>
-      <p className="mt-4">
-        For more visit my{" "}
-        <a
-          href="https://github.com/UnfazedAy"
-          target="_blank"
-          rel="noreferrer"
-          className="text-thickBrownishYellow"
-        >
-          github
-        </a>{" "}
-        page.
-      </p>
     </div>
   );
 }
