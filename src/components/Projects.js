@@ -9,7 +9,7 @@ export default function Projects() {
   const [projectData, setProjectData] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/v1/projects")
+      .get("https://portfolio-api-4m4d.onrender.com/api/v1/projects")
       .then((response) => setProjectData(response.data.data))
       .catch((error) => console.error(`Error fetching project data: ${error.message}`))
   }, []);
